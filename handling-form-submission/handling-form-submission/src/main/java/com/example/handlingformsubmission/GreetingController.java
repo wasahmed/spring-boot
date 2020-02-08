@@ -11,11 +11,15 @@ public class GreetingController {
     @GetMapping("/greeting")
     public String greetingForm(Model model){
         model.addAttribute("greeting", new Greeting());
-        return "greeting";//returns a name of a view
+        return "greeting";//returns a name of a view responsible for rendering html content
     }
 
     @PostMapping("/greeting")
     public String greetingSubmit(@ModelAttribute Greeting greeting) {
         return "result";
     }
+//    The Greeting is a @ModelAttribute, so it is bound to the incoming form content.
+//    Also, the submitted data can be rendered in the result view by referring to it
+//    by name (by default, the name of the method parameter, so greeting in this case)
 }
+https://spring.io/guides/gs/handling-form-submission/
