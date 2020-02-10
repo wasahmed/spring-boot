@@ -2,6 +2,7 @@ package com.todo.app;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -33,9 +34,15 @@ public class mvcController {
     }
 
     @RequestMapping("/getAll")
-    public String getAll()
+    public String getAll(Model model)
     {
-        System.out.println(repo.findAll());
+        List<Todo> lst = repo.printAll();
+        StringBuilder str = new StringBuilder("");
+        for (Todo t: lst) {
+            str.append("<li>");
+            str.append(t.toString());
+        }
+        model.addAttribute("toDo", str.toString());
         return "showTodo.html";
     }
 
@@ -44,13 +51,4 @@ public class mvcController {
     {
         return "login.html";
     }
-
-//    @RequestMapping("/getAll")au
-//    public ModelAndView getAlien(@RequestParam int aid)
-//    {
-//        ModelAndView mv=new ModelAndView("showAlien.jsp");
-//        Alien alien=repo.findById(aid).orElse(new Alien());
-//        mv.addObject(alien);
-//        return mv;
-//}
 }

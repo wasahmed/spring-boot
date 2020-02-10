@@ -8,16 +8,24 @@
         body{
             font-size: x-large;
         }
+        ol{
+            border: 1px solid black;
+        }
+        li{
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
 
-<p>hello</p>
+<h1>Your Todo's</h1>
+<a href="home">Add another todo</a>
+<ol><div th:remove="tag" th:utext="${toDo}"></div>
+</ol>
+
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="Sign Out"/>
 </form>
-
-<a href="home">Add another todo</a>
 
 </body>
 </html>
