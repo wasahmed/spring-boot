@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <style>
+        body{
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+<form th:action="@{addTodo}">
+
+    <input type="text" name="content"><br>
+    <input type="submit" value="Add a todo"><br>
+</form>
+
+<form th:action="@{getAll}">
+    <input type="submit" value="View todo's"><br>
+</form>
+
+</body>
+</html>
