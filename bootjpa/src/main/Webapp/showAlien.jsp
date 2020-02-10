@@ -8,7 +8,13 @@
 </head>
 <body>
 
-${alien}
+<%--${alien}--%>
+<p>
+<c:forEach items="${alien}" var="alien">
 
+    <p>${alien.ananme}</p>
+
+</c:forEach>
+</p>
 </body>
 </html>

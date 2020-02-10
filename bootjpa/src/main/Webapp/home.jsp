@@ -14,7 +14,7 @@
 </form>
 
 <form action="getAll">
-    <input type="text" name="aid"><br>
+<%--    <input type="text" name="aid"><br>--%>
     <input type="submit"><br>
 </form>
 

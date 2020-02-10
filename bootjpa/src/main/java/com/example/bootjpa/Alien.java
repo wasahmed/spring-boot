@@ -1,5 +1,6 @@
 package com.example.bootjpa;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,6 +26,6 @@ public class Alien {
     }
     @Override
     public String toString() {
-        return "Alien [aid=" + aid + ", aname=" + aname + "]";
+        return aname ;
     }
 }
