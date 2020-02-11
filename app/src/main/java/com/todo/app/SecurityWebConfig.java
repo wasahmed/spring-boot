@@ -12,12 +12,12 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityWebConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("http://localhost:8080/h2-console/test.do?jsessionid=c9cf1fd2da2e1a8f43ebe177376c9237").permitAll()
+                .antMatchers("/h2-console/test.do?jsessionid=243b3514b6a188909eb281e9714b8350").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
