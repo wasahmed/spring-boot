@@ -1,24 +1,24 @@
 package com.example.learningspring.model;
 
 public class Topics {
-    private int id;
+    private String id;
     private String topic;
     private String desc;
 
     public Topics() {
     }
 
-    public Topics(int id, String topic, String desc) {
+    public Topics(String id, String topic, String desc) {
         this.id = id;
         this.topic = topic;
         this.desc = desc;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

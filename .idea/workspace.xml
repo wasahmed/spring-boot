@@ -24,6 +24,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SvnConfiguration">
@@ -36,17 +38,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581150527182</updated>
+      <workItem from="1582452859374" duration="6000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="56" key="SettingsEditor" timestamp="1581150558226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581150558226" />
-    <state x="89" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581150535613">
+    <state x="89" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1582452859769">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="89" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581150535613" />
+    <state x="89" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582452859769" />
   </component>
 </project>
