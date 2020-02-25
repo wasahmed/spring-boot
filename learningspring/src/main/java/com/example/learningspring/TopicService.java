@@ -1,15 +1,18 @@
 package com.example.learningspring;
 
-import com.example.learningspring.model.Topics;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.Optional;
 
 @Service
 public class TopicService {
+
+    @Autowired
+    TopicRepository topicRepository;
 
     List<Topics> topics = new ArrayList<>(Arrays.asList(
             new Topics("1", "test", "test desc"),
@@ -23,13 +26,14 @@ public class TopicService {
         return topics;
     }
 
-    public Topics getTopic(String id)
+    public Optional<Topics> getTopic(String id)
     {
-        return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+        //return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+        return topicRepository.findById(id);
     }
 
     public void addTopic(Topics topic) {
-        topics.add(topic);
+        topicRepository.save(topic);
     }
 
     public void updateTopic(Topics topic, String id) {

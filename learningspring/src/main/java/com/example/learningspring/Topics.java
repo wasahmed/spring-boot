@@ -1,6 +1,11 @@
-package com.example.learningspring.model;
+package com.example.learningspring;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Topics {
+    @Id
     private String id;
     private String topic;
     private String desc;
